@@ -2,14 +2,14 @@ import React, { use, useState } from 'react';
 import AvailableProducts from '../AvailableProducts/AvailableProducts';
 import SelectedProducts from '../SelectedProducts/SelectedProducts';
 
-const Products = ({ productPromise }) => {
+const Products = ({ productPromise, carts, setCarts }) => {
 
   const products=use(productPromise)
   console.log(productPromise);
 
 
   const [toggle, setToggle] = useState(true);
-  const [carts, setCarts]=useState([]);
+  
 
 
   return (

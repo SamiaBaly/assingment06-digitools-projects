@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const SelectedProducts = ({ carts, setCarts }) => {
 
@@ -7,45 +8,63 @@ const SelectedProducts = ({ carts, setCarts }) => {
 
   
   const handleRemove=(cart)=>{
+    toast.error("cart is remove");
     const filterCarts=carts.filter(removeCart=>removeCart.name!=cart.name)
-    setCarts(filterCarts);
-
-
-    
+    setCarts(filterCarts); 
   }
-  return (
-    <div className='bg-base-300 p-5 rounded-2xl'>
-      <h2 className="text-4xl font-bold">Your Cart</h2>
-      <div>
-        <div>
-          {carts.map((cart, inde) => (
-            <div key={inde} className="flex justify-between items-center shadow-sm p-4 rounded-2xl my-4 bg-base-100">
-              <div className="flex gap-4">
-                <div className='w-12 h-12 border p-2 rounded-full'>
-                  <img className='w-8 h-8' src={cart.icon} alt="" />
-                </div>
-                <div>
-                  <h2 className='font-bold text-xl text-gray-500'>{cart.name}</h2>
-                  <p>${cart.price}</p>
-                </div>
-              </div>
-              <button onClick={()=>handleRemove(cart)} className="text-red-500 font-bold btn btn-soft btn-warning">
-                Remove
-              </button>
-            </div>
-          ))}
-        </div>
+const paymentProces=()=>{
+  toast.success("Payment successfull");
+  setCarts([]);
+}
 
+  return (
+    <div>
+      {
+      carts.length===0?(<div className='bg-base-200 h-[300px] rounded-2xl text-center flex flex-col items-center justify-center'>
+        <h2 className='text-2xl font-bold text-gray-400'>Your Cart is Empty</h2>
+        <p className='text-gray-400'>Plase go to products and choose card!!</p>
+      </div>):(<div className="bg-base-300 p-5 rounded-2xl">
+        <h2 className="text-4xl font-bold">Your Cart</h2>
         <div>
-          <div className="bg-base-200 flex justify-between items-center text-2xl font-bold p-3 my-3 rounded-2xl">
-            <h2>Total</h2>
-            <h2>${totalPrice}</h2>
+          <div>
+            {carts.map((cart, inde) => (
+              <div
+                key={inde}
+                className="flex justify-between items-center shadow-sm p-4 rounded-2xl my-4 bg-base-100"
+              >
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 border p-2 rounded-full">
+                    <img className="w-8 h-8" src={cart.icon} alt="" />
+                  </div>
+                  <div>
+                    <h2 className="font-bold text-xl text-gray-500">
+                      {cart.name}
+                    </h2>
+                    <p>${cart.price}</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => handleRemove(cart)}
+                  className="text-red-500 font-bold btn btn-soft btn-warning"
+                >
+                  Remove
+                </button>
+              </div>
+            ))}
           </div>
-          <button className="bg-gradient btn btn-block text-white text-xl rounded-4xl">
-            Proceed to Checkout
-          </button>
+
+          <div>
+            <div className="bg-base-200 flex justify-between items-center text-2xl font-bold p-3 my-3 rounded-2xl">
+              <h2>Total</h2>
+              <h2>${totalPrice}</h2>
+            </div>
+            <button onClick={paymentProces} className="bg-gradient btn btn-block text-white text-xl rounded-4xl">
+              Proceed to Checkout
+            </button>
+          </div>
         </div>
-      </div>
+      </div>)
+      }
     </div>
   );
 };

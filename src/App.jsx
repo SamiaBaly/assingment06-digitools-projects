@@ -1,10 +1,11 @@
 
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 import './App.css'
 import Banner from './componants/Banner/Banner';
 import BannerBottom from './componants/BannerBottom/BannerBottom';
 import Products from './componants/MainPart/Products/Products';
 import NavBar from './componants/NavBar/NavBar';
+import { ToastContainer } from 'react-toastify';
 
 
 const fetchProducts=async()=>{
@@ -15,18 +16,25 @@ const fetchProducts=async()=>{
 function App() {
 
   const productPromise=fetchProducts();
+  const [carts, setCarts] = useState([]);
   
 
   return (
     <>
-      <NavBar />
+      <NavBar carts={carts} />
       <Banner />
       <BannerBottom />
       <Suspense
         fallback={<span className="loading loading-dots loading-xl"></span>}
       >
-        <Products productPromise={productPromise}></Products>
+        <Products
+          productPromise={productPromise}
+          carts={carts}
+          setCarts={setCarts}
+        ></Products>
       </Suspense>
+
+      <ToastContainer />
     </>
   );
 }

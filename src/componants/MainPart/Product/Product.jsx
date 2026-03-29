@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FeatureList from './FeatureList';
-import { Check } from 'lucide-react';
+import { Check, TurkishLira } from 'lucide-react';
+import { toast } from 'react-toastify';
 
 const Product = ({ product, carts, setCarts }) => {
   const { name, description, price, period, tag, icon, features } = product;
@@ -16,8 +17,24 @@ const Product = ({ product, carts, setCarts }) => {
   const [selected, setSelected] = useState(false);
 
   const handleSelected = () => {
+const findProducts = carts.find(find => find.name === product.name);
+     if (findProducts) {
+       
+      toast.warning('this card already added');
+       return;
+     } else {
+      toast.success('Add to cart succesfully');
+       setCarts([...carts, product]);
+     }
+    
+
     setSelected(true);
-    setCarts([...carts, product]);
+
+    
+    
+  
+       
+    
   };
 
   return (
