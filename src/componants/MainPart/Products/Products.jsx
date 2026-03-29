@@ -9,6 +9,9 @@ const Products = ({ productPromise }) => {
 
 
   const [toggle, setToggle] = useState(true);
+  const [carts, setCarts]=useState([]);
+
+
   return (
     <div className="py-[120px]">
       <div className="container mx-auto">
@@ -33,7 +36,7 @@ const Products = ({ productPromise }) => {
               onClick={() => setToggle(false)}
               className={`btn rounded-4xl text-[16px] font-bold ${toggle === false ? 'bg-gradient text-white' : ''}`}
             >
-              Cart (2)
+              Cart ({carts.length})
             </button>
           </div>
         </div>
@@ -41,10 +44,15 @@ const Products = ({ productPromise }) => {
         {/* fetchpart */}
 
         <div>
-
-          {
-            toggle===true?(<AvailableProducts products={products}></AvailableProducts>):(<SelectedProducts></SelectedProducts>)
-          }
+          {toggle === true ? (
+            <AvailableProducts
+              products={products}
+              carts={carts}
+              setCarts={setCarts}
+            ></AvailableProducts>
+          ) : (
+            <SelectedProducts carts={carts} setCarts={setCarts}></SelectedProducts>
+          )}
         </div>
       </div>
     </div>
