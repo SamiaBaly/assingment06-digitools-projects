@@ -126,5 +126,21 @@
       "Quick edits",
       "Download options"
     ]
+  },
+  {
+    "id": 9,
+    "name": "Skill Builder Academy",
+    "description": "Learn in-demand skills with guided courses and hands-on projects.",
+    "price": 1599,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "new",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiI+PHBhdGggZD0iTTMgNmgxOHYxMkgzeiIvPjxwYXRoIGQ9Ik0zIDEwbDEyIDciLz48L3N2Zz4=",
+    "features": [
+      "Video courses",
+      "Hands-on projects",
+      "Certificates",
+      "Mentor support"
+    ]
   }
 ]

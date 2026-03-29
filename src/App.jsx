@@ -6,6 +6,7 @@ import BannerBottom from './componants/BannerBottom/BannerBottom';
 import Products from './componants/MainPart/Products/Products';
 import NavBar from './componants/NavBar/NavBar';
 import { ToastContainer } from 'react-toastify';
+import GetStarted from './componants/GetStarted/GetStarted';
 
 
 const fetchProducts=async()=>{
@@ -33,6 +34,7 @@ function App() {
           setCarts={setCarts}
         ></Products>
       </Suspense>
+      <GetStarted></GetStarted>
 
       <ToastContainer />
     </>
