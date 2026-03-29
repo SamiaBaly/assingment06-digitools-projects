@@ -8,6 +8,7 @@ import NavBar from './componants/NavBar/NavBar';
 import { ToastContainer } from 'react-toastify';
 import GetStarted from './componants/GetStarted/GetStarted';
 import PricingSection from './componants/PricingSection/PricingSection';
+import WorkFlow from './componants/WorkFlow/WorkFlow';
 
 
 const fetchProducts=async()=>{
@@ -37,6 +38,7 @@ function App() {
       </Suspense>
       <GetStarted></GetStarted>
       <PricingSection></PricingSection>
+      <WorkFlow></WorkFlow>
 
       <ToastContainer />
     </>
