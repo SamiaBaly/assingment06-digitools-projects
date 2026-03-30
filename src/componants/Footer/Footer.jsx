@@ -7,29 +7,29 @@ const Footer = () => {
     <div className="bg-[#101727] ">
       <div className="container mx-auto">
         <footer className="footer grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 text-neutral-content pt-10">
-          <nav className="flex flex-col justify-center items-center  mx-auto text-center">
-            <h2 className="text-3xl font-bold">DigiTools</h2>
+          <nav className="flex flex-col justify-center items-center md:items-left  mx-auto ">
+            <h2 className="text-3xl font-bold mb-2">DigiTools</h2>
             <p className='text-center md:text-left lg:text-left'>
-              Premium digital tools for creators, <br /> professionals, and
-              businesses. Work smarter <br /> with our suite of powerful tools.
+              Premium digital tools for creators, <br /> <br /> professionals, and
+              businesses. Work smarter <br /> <br /> with our suite of powerful tools.
             </p>
           </nav>
           <section className='md:col-span-4 grid grid-cols-3 justify-between  md:grid-cols-4 sm:container mx-auto gap-4 md:gap-2'>
-            <nav className="flex flex-col justify-center items-center mx-auto text-center">
+            <nav className="flex flex-col justify-center items-left mx-auto text-left space-y-4">
               <h6 className="footer-title">Product</h6>
               <a className="link link-hover">Features</a>
               <a className="link link-hover">Pricing</a>
               <a className="link link-hover">Templates</a>
               <a className="link link-hover">Integrations</a>
             </nav>
-            <nav className="flex flex-col justify-center items-center mx-auto text-center">
+            <nav className="flex flex-col justify-center items-left mx-auto text-left space-y-4">
               <h6 className="footer-title">Company</h6>
               <a className="link link-hover">About </a>
               <a className="link link-hover">Blog</a>
               <a className="link link-hover">Careers</a>
               <a className="link link-hover">Press </a>
             </nav>
-            <nav className="flex flex-col justify-center items-center mx-auto text-center">
+            <nav className="flex flex-col justify-center items-left mx-auto text-left space-y-4">
               <h6 className="footer-title">Resources</h6>
               <a className="link link-hover">Documentation</a>
               <a className="link link-hover">Help Center</a>
