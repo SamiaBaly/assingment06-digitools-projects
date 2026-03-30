@@ -3,9 +3,9 @@ import React from 'react';
 const WorkFlow = () => {
   return (
     <div className="bg-gradient">
-      <div className="container mx-auto text-center py-[120px] text-white">
+      <div className="container mx-auto text-center px-3 py-4 md:py-[120px] text-white">
         <div>
-          <h2 className="text-[48px] font-extrabold">
+          <h2 className="text-[30px] md:text-[48px] font-extrabold">
             Ready to Transform Your Workflow?
           </h2>
           <p className=" mt-2">
@@ -14,8 +14,8 @@ const WorkFlow = () => {
           </p>
         </div>
         <div className='my-3'>
-          <button className='bg-white m-3 p-4 rounded-4xl text-black'>Explore Products</button>
-          <button className='text-white m-3 p-4 rounded-4xl text-black outline'>View Pricing</button>
+          <button className='bg-white m-2 px-4 py-3 rounded-4xl text-black'>Explore Products</button>
+          <button className='text-white m-2 px-4 py-3 rounded-4xl text-black outline'>View Pricing</button>
         </div>
         <div>
           <p>

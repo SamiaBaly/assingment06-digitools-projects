@@ -13,8 +13,8 @@ const Products = ({ productPromise, carts, setCarts }) => {
 
 
   return (
-    <div className="py-[120px]">
-      <div className="container mx-auto">
+    <div className="py-0 md:py-[120px]">
+      <div className="container mx-auto p-6">
         <div className="text-center mb-4">
           <div>
             <h2 className="text-[48px] font-extrabold">

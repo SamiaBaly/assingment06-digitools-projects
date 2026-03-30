@@ -5,12 +5,12 @@ import { ShoppingCart } from 'lucide-react';
 const NavBar = ({carts}) => {
   return (
     <div className="bg-base-100 shadow-md">
-      <div className="flex justify-between items-center container mx-auto py-4">
+      <div className="flex justify-between items-center container mx-auto py-4 px-4 md:px-0">
         <div className="mr-4">
-          <img src={logoImg} alt="" />
+          <img className='w-[140px] md:w[250px]' src={logoImg} alt="" />
         </div>
-        <div>
-          <ul className="flex justify-between items-center gap-4">
+        <div className="">
+          <ul className="hidden md:flex justify-between items-center gap-4 ">
             <li>Products</li>
             <li>Features</li>
             <li>Pricing</li>

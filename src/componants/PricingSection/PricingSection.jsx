@@ -4,9 +4,9 @@ import React from 'react';
 const PricingSection = () => {
   return (
     <div>
-      <div className="container mx-auto text-center py-[120px]">
+      <div className="container mx-auto text-center md:py-[120px] p-6">
         <div>
-          <h2 className="text-[48px] font-extrabold">
+          <h2 className="text-[32px] md:text-[48px] font-extrabold">
             Simple, Transparent Pricing
           </h2>
           <p className="text-[#627382] mt-2">
@@ -44,7 +44,7 @@ const PricingSection = () => {
           </div>
 
           <div className="bg-base-200 p-6 rounded-2xl shadow-md text-white bg-gradient relative">
-            <div className="badge badge-soft badge-warning absolute -top-3 left-35 bg-yellow-200">Most Popular</div>
+            <div className="badge badge-soft badge-warning absolute -top-3 left-[35%] md:left-35 lg:left-48 bg-yellow-200">Most Popular</div>
             <div className="my-2">
               <h2 className="text-xl font-bold">Pro</h2>
               <p className="text-gray-400">Best for professionals</p>
